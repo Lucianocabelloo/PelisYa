@@ -1,0 +1,32 @@
+.container{
+  max-width: 100vh;
+}
+.movies{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+
+.movie {
+list-style: none;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+width: 100%;
+}
+
+.movie h2{
+  font-size: 1.2rem;
+  text-align: center;
+}
+.movie h3{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.movie h3, h2{
+  margin: 0px;
+}
