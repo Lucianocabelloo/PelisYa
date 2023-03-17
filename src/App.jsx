@@ -7,21 +7,15 @@ import React from 'react'
 
 import './App.css'
 import Form from './components/Form'
-import Movies from './components/Movies'
+// import Movies from './components/Movies'
 
 function App () {
   return (
     <>
-    <div className='container'>
-
     <header>
       <h1>PelisYa</h1>
       <Form/>
     </header>
-    <main>
-      <Movies/>
-    </main>
-    </div>
     </>
   )
 }
