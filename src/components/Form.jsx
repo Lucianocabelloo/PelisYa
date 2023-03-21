@@ -7,12 +7,11 @@ const Form = () => {
 
   const inputRef = useRef()
 
-  const handleChange = () => {
+  const handleSubmit = (event) => {
+    if (search.length === 1) return
+    event.preventDefault()
     const newSearch = inputRef.current.value
     setSearch(newSearch)
-  }
-  const handleSubmit = (event) => {
-    event.preventDefault()
   }
   const handleRefresh = () => {
     window.location.reload()
@@ -22,7 +21,7 @@ const Form = () => {
 
     <main>
         <form onSubmit={handleSubmit} className='form'>
-            <input aria-invalid={validate} onChange={handleChange} ref={inputRef} className='Form-Input' type="text" placeholder='Star Wars, Rambo, Rocky' />
+            <input aria-invalid={validate} ref={inputRef} className='Form-Input' type="text" placeholder='Star Wars, Rambo, Rocky' />
             <div className='Form-Buttons'>
             <button>Search</button>
             <button onClick={handleRefresh}>Refrescar</button>

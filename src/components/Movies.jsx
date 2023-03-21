@@ -30,7 +30,7 @@ function Movies ({ itsSearch }) {
           {mappedMovies.map(movie => (
             <li className='movie' key={movie.id}>
               <h2>{movie.title}</h2>
-              <img src={movie.image} alt={movie.tittle} />
+              <img src={movie.image} alt={movie.title} />
               <h3>Año de estreno: {movie.year}</h3>
             </li>
           ))}
