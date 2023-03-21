@@ -30,3 +30,14 @@ width: 100%;
 .movie h3, h2{
   margin: 0px;
 }
+
+.Form-Buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Form-Buttons button{
+  width: 25%;
+}

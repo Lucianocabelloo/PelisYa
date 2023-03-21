@@ -23,8 +23,10 @@ const Form = () => {
     <main>
         <form onSubmit={handleSubmit} className='form'>
             <input aria-invalid={validate} onChange={handleChange} ref={inputRef} className='Form-Input' type="text" placeholder='Star Wars, Rambo, Rocky' />
-            <button className='Form-Button'>Search</button>
+            <div className='Form-Buttons'>
+            <button>Search</button>
             <button onClick={handleRefresh}>Refrescar</button>
+            </div>
         </form>
         { error && <strong>{ error }</strong> }
         {search && <Movies itsSearch={search}/>}

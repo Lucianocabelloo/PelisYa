@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
-// http://img.omdbapi.com/?apikey=[yourkey]&
-// Api: 66a2be86
-
+// eslint-disable-next-line react/prop-types
 function Movies ({ itsSearch }) {
   const [movies, setMovies] = useState([])
   if (itsSearch === '') {
     return
   } else {
     useEffect(() => {
-      fetch(`http://omdbapi.com/?apikey=66a2be86&s=${itsSearch}`)
+      fetch(`https://omdbapi.com/?apikey=66a2be86&s=${itsSearch}`)
         .then(results => results.json())
         .then(data => setMovies(data.Search))
     }, [itsSearch])

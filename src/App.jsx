@@ -12,10 +12,10 @@ import Form from './components/Form'
 function App () {
   return (
     <>
-    <header>
+    <div className='container'>
       <h1>PelisYa</h1>
       <Form/>
-    </header>
+    </div>
     </>
   )
 }
